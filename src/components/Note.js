@@ -1,12 +1,16 @@
 import { MdDeleteForever } from 'react-icons/md';
 
+import { useDispatch } from "react-redux";
+import {delNote} from "../redux/main"
+
 const Note = ({
 	id,
 	text,
 	date,
-	bgColor,
-	handleDeleteNote
+	bgColor
 }) => {
+	
+	const dispatch = useDispatch();
 
 	return (
 		<div className='note' style={{backgroundColor: bgColor}}>
@@ -17,7 +21,7 @@ const Note = ({
 				<small>{date}</small>
 
 				<MdDeleteForever
-					onClick={() => handleDeleteNote(id)}
+					onClick={() => dispatch(delNote(id))}
 					className='icon'
 					size='1.5em'
 				/>

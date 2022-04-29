@@ -2,14 +2,20 @@ import { useState } from 'react';
 import { MdSave, MdCancel } from 'react-icons/md';
 import { CirclePicker } from 'react-color';
 
-const AddNote = ({ handleAddNote }) => {
+import { useDispatch } from 'react-redux';
+import { addingNote } from '../redux/main';
+
+const AddNote = () => {
 
 	const [noteText, setNoteText] = useState('');	
 	const [noteColor, setNoteColor] = useState("#F6FFA4");
 
+	const dispatch = useDispatch();
+
 	const handleChange = (event) => {
 			setNoteText(event.target.value);
 	};
+	
 	const handleClean = () => {
 		setNoteText("");
 		setNoteColor("#F6FFA4");
@@ -17,8 +23,8 @@ const AddNote = ({ handleAddNote }) => {
 
 	const handleSaveClick = () => {
 		if (noteText.trim().length > 0) {
-			handleAddNote(noteText, noteColor);
-			setNoteText('');
+			dispatch(addingNote([noteText, noteColor] ));
+			handleClean();
 		}
 	};
 
