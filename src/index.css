@@ -15,7 +15,14 @@ code {
 .header {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-evenly;
+}
+
+button {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
 }
 
 .dark-mode {
@@ -24,6 +31,10 @@ code {
 
 .dark-mode h1 {
 	color: white;
+}
+
+.dark-mode button {
+	border-color: white;
 }
 
 .container {
@@ -36,6 +47,8 @@ code {
 }
 
 .notes-list {
+	padding: 15px;
+	border-radius: 10px;
 	display: grid;
 	grid-gap: 1rem;
 	grid-template-columns: repeat(
@@ -44,41 +57,36 @@ code {
 	);
 }
 
+.dark-mode .notes-list {
+	background-color: rgba(255,255,255, 0.6);
+}
 .note.new {
-	background-color: #67d7cc;
+	background-color: #c8f0ec;
 }
 
 textarea {
 	border: none;
 	resize: none;
-	background-color: #67d7cc;
+	background-color:transparent;
 }
 
 textarea:focus {
 	outline: none;
 }
 
-.save {
-	background-color: #e1e1e1;
-	border: none;
-	border-radius: 15px;
-	padding: 5px 10px 5px 10px;
-}
-
-.save:hover {
-	background-color: #ededed;
-	cursor: pointer;
-}
-
 .note {
-	background-color: #fef68a;
 	border-radius: 10px;
 	padding: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	min-height: 170px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	white-space: pre-wrap;
+}
+
+.note:hover {	
+	box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
 }
 
 .note-footer {
@@ -87,17 +95,26 @@ textarea:focus {
 	justify-content: space-between;
 }
 
-.delete-icon {
+.icon {
 	cursor: pointer;
+	border: none;
+	border-radius: 15px;
+	padding: 5px 10px 5px 10px;
+}
+
+.icon:hover {
+	color: red;
+	background-color: rgba(255,255,255, 0.4);
 }
 
 .search {
+	width: 14em;
 	display: flex;
 	align-items: center;
 	background-color: rgb(233, 233, 233);
 	border-radius: 10px;
 	padding: 5px;
-	margin-bottom: 1.5em;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .search input {
