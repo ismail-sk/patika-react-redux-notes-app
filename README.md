@@ -4,3 +4,5 @@ This is a note taking app mainly build by [Chris Blakely](https://github.com/chr
 This is a homework from [patika.dev redux homework 1 ](https://app.patika.dev/courses/redux/todo-app-odev)
 
 please check branches for REDUX version.
+
+![Preview of how the page looks on different devices](example.png)
