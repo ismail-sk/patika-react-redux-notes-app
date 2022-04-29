@@ -5,4 +5,7 @@ This is a homework from [patika.dev redux homework 1 ](https://app.patika.dev/co
 
 This is REDUX based version. please check src folder for redux storage components
 
+For live:
+https://pati-hw1-note.surge.sh/
+
 ![Preview of how the page looks on different devices](example.png)
